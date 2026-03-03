@@ -1,5 +1,5 @@
+#%%
 import pandas as pd
-
 
 # Step 1: Define column names
 column_names = [
@@ -15,10 +15,9 @@ column_names = [
     'dst_host_srv_serror_rate', 'dst_host_rerror_rate', 'dst_host_srv_rerror_rate', 'label'
 ]
 
-
 # Step 2: Load datasets
-train_path = "C:/Users/masri/OneDrive - Asia Pacific University of Technology And Innovation (APU)/SEM1/AML/Assignment/archive/KDDTrain+.txt"  
-test_path  = "C:/Users/masri/OneDrive - Asia Pacific University of Technology And Innovation (APU)/SEM1/AML/Assignment/archive/KDDTest+.txt"   
+train_path = "C:/Users/masri/OneDrive - Asia Pacific University of Technology And Innovation (APU)/SEM1/AML/Assignment AML MASTERS/archive/KDDTrain+.txt"  
+test_path  = "C:/Users/masri/OneDrive - Asia Pacific University of Technology And Innovation (APU)/SEM1/AML/Assignment AML MASTERS/archive/KDDTest+.txt"   
 
 train_df = pd.read_csv(train_path, names=column_names)
 test_df  = pd.read_csv(test_path, names=column_names)
@@ -33,3 +32,5 @@ print("\n=== TEST DATASET INFO ===")
 print("Shape:", test_df.shape)
 print("\nMissing values:\n", test_df.isnull().sum())
 print("\nClass distribution:\n", test_df['label'].value_counts())
+
+#%%
